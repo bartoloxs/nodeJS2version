@@ -12,8 +12,11 @@ var asycnAdd = (a, b) => {
 
 asycnAdd(1, 5).then((result) => {
   console.log('Result is ', result);
+  return asycnAdd(result, 13);
 }, (errMessage) => {
   console.log(errMessage);
+}).then((finalResult) => {
+  console.log('Final result is: ', finalResult);
 });
 
 // var somePromise = new Promise((resolve, reject) => {
