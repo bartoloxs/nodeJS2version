@@ -10,13 +10,13 @@ var asycnAdd = (a, b) => {
   });
 };
 
-asycnAdd(1, 5).then((result) => {
+asycnAdd(1, 23).then((result) => {
   console.log('Result is ', result);
-  return asycnAdd(result, 13);
-}, (errMessage) => {
-  console.log(errMessage);
+  return asycnAdd(result, '13');
 }).then((finalResult) => {
   console.log('Final result is: ', finalResult);
+}).catch(errMessage => {
+  console.log(errMessage);
 });
 
 // var somePromise = new Promise((resolve, reject) => {
